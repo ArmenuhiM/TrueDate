@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Prematch View Controller-->
+        <scene sceneID="9md-Qr-u3W">
+            <objects>
+                <viewController id="lCS-mN-Crf" customClass="PrematchViewController" customModule="TrueDate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aSF-6R-gBz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It's a Match!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fXo-9L-RFj">
+                                <rect key="frame" x="26" y="74" width="329" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fXo-9L-RFj" secondAttribute="height" multiplier="329:60" id="sWB-kl-IFh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="50"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You and have liked each other." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="pU1-ur-RHD">
+                                <rect key="frame" x="26" y="164" width="329" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="pU1-ur-RHD" secondAttribute="height" multiplier="47:3" id="3V9-uW-WvH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RMv-GN-hSH" userLabel="ImageView">
+                                <rect key="frame" x="17.5" y="214" width="340" height="150"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ghE-mr-mRD" customClass="iOSImageView" customModule="TrueDate" customModuleProvider="target">
+                                        <rect key="frame" x="50" y="17" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="OuV-6M-UIn"/>
+                                            <constraint firstAttribute="height" constant="100" id="VSa-ED-IlE"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YQM-3F-nt7" customClass="iOSImageView" customModule="TrueDate" customModuleProvider="target">
+                                        <rect key="frame" x="190" y="17" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="Msy-tS-KwY"/>
+                                            <constraint firstAttribute="height" constant="100" id="sIT-IK-vHX"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="YQM-3F-nt7" secondAttribute="bottom" constant="33" id="KCY-KU-grG"/>
+                                    <constraint firstItem="YQM-3F-nt7" firstAttribute="top" secondItem="RMv-GN-hSH" secondAttribute="top" constant="17" id="T28-UH-rT7"/>
+                                    <constraint firstItem="ghE-mr-mRD" firstAttribute="top" secondItem="RMv-GN-hSH" secondAttribute="top" constant="17" id="XYo-lv-mrQ"/>
+                                    <constraint firstItem="ghE-mr-mRD" firstAttribute="leading" secondItem="RMv-GN-hSH" secondAttribute="leading" constant="50" id="Yad-Hw-KLC"/>
+                                    <constraint firstItem="YQM-3F-nt7" firstAttribute="leading" secondItem="ghE-mr-mRD" secondAttribute="trailing" constant="40" id="YdW-JD-YRr"/>
+                                    <constraint firstAttribute="width" secondItem="RMv-GN-hSH" secondAttribute="height" multiplier="34:15" id="k4o-Bi-z5F"/>
+                                    <constraint firstAttribute="bottom" secondItem="ghE-mr-mRD" secondAttribute="bottom" constant="33" id="lDX-eB-cUZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="YQM-3F-nt7" secondAttribute="trailing" constant="50" id="lmK-DR-pYe"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOl-sg-Yxq" customClass="iOSCommonButton" customModule="TrueDate" customModuleProvider="target">
+                                <rect key="frame" x="32" y="372" width="310" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="TOl-sg-Yxq" secondAttribute="height" multiplier="310:49" id="XMQ-pF-8v3"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="-20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Send Message" image="bubble"/>
+                                <connections>
+                                    <action selector="sendMessageAction:" destination="lCS-mN-Crf" eventType="touchUpInside" id="h3q-pf-NA6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMz-ex-FxS" customClass="iOSCommonButton" customModule="TrueDate" customModuleProvider="target">
+                                <rect key="frame" x="32" y="431" width="310" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="TMz-ex-FxS" secondAttribute="height" multiplier="310:49" id="Yoj-dv-ZKv"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="-20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Keep Matching" image="user-filled"/>
+                                <connections>
+                                    <action selector="keepPlayingAction:" destination="lCS-mN-Crf" eventType="touchUpInside" id="lpy-Dg-D1e"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.28627450980392155" green="0.28627450980392155" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="plR-UO-8QX" firstAttribute="trailing" secondItem="TMz-ex-FxS" secondAttribute="trailing" constant="33" id="1fo-gt-zRc"/>
+                            <constraint firstItem="TMz-ex-FxS" firstAttribute="top" secondItem="TOl-sg-Yxq" secondAttribute="bottom" constant="10" id="4qI-Ob-3Vg"/>
+                            <constraint firstItem="RMv-GN-hSH" firstAttribute="centerX" secondItem="plR-UO-8QX" secondAttribute="centerX" id="5a8-bD-cIE"/>
+                            <constraint firstItem="pU1-ur-RHD" firstAttribute="leading" secondItem="plR-UO-8QX" secondAttribute="leading" constant="26" id="5vE-3t-feQ"/>
+                            <constraint firstItem="RMv-GN-hSH" firstAttribute="top" secondItem="pU1-ur-RHD" secondAttribute="bottom" priority="900" constant="29" id="9kf-y7-jLF"/>
+                            <constraint firstItem="fXo-9L-RFj" firstAttribute="top" secondItem="plR-UO-8QX" secondAttribute="top" priority="900" constant="54" id="CxV-DX-cmx"/>
+                            <constraint firstItem="TMz-ex-FxS" firstAttribute="width" secondItem="TMz-ex-FxS" secondAttribute="height" multiplier="310:49" id="DdG-cq-70n"/>
+                            <constraint firstItem="pU1-ur-RHD" firstAttribute="top" secondItem="fXo-9L-RFj" secondAttribute="bottom" constant="30" id="Id2-Ou-kUk"/>
+                            <constraint firstItem="TOl-sg-Yxq" firstAttribute="top" secondItem="RMv-GN-hSH" secondAttribute="bottom" constant="8" id="LFN-UD-5kT"/>
+                            <constraint firstItem="plR-UO-8QX" firstAttribute="trailing" secondItem="pU1-ur-RHD" secondAttribute="trailing" constant="20" id="PNM-Tj-a3d"/>
+                            <constraint firstItem="TOl-sg-Yxq" firstAttribute="leading" secondItem="plR-UO-8QX" secondAttribute="leading" constant="32" id="PTh-7k-5yS"/>
+                            <constraint firstItem="plR-UO-8QX" firstAttribute="trailing" secondItem="fXo-9L-RFj" secondAttribute="trailing" constant="20" id="Wuw-S7-My3"/>
+                            <constraint firstItem="fXo-9L-RFj" firstAttribute="leading" secondItem="plR-UO-8QX" secondAttribute="leading" constant="26" id="dLV-2F-iZc"/>
+                            <constraint firstItem="plR-UO-8QX" firstAttribute="bottom" secondItem="TMz-ex-FxS" secondAttribute="bottom" priority="750" constant="75" id="hME-Ug-OOT"/>
+                            <constraint firstItem="plR-UO-8QX" firstAttribute="trailing" secondItem="TOl-sg-Yxq" secondAttribute="trailing" constant="33" id="xp5-tc-hYG"/>
+                            <constraint firstItem="TMz-ex-FxS" firstAttribute="leading" secondItem="plR-UO-8QX" secondAttribute="leading" constant="32" id="zdQ-oa-0Sz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="plR-UO-8QX"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YNX-BF-F7V"/>
+                    <connections>
+                        <outlet property="currentUserImage" destination="ghE-mr-mRD" id="QRD-dX-YQj"/>
+                        <outlet property="keepPlaying" destination="TMz-ex-FxS" id="KzV-yg-TOm"/>
+                        <outlet property="matchText" destination="pU1-ur-RHD" id="pcr-E9-bjB"/>
+                        <outlet property="opponentUserImage" destination="YQM-3F-nt7" id="rvP-ax-cuk"/>
+                        <outlet property="sendMessage" destination="TOl-sg-Yxq" id="mzy-P3-5UW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O5C-xO-qkF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="754" y="190"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CJg-Kk-qVL">
+            <objects>
+                <navigationController storyboardIdentifier="PreMatchView" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" navigationBarHidden="YES" id="yUK-es-yAy" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dKK-pC-8k6">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lCS-mN-Crf" kind="relationship" relationship="rootViewController" id="ApN-vX-gIR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Phk-gI-dK3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4" y="190"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bubble" width="25" height="25"/>
+        <image name="user-filled" width="25" height="25"/>
+    </resources>
+</document>

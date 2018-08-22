@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="MatchCollectionViewCell" reuseIdentifier="MatchCollectionViewCell" id="vrX-Fs-yfo" customClass="MatchCollectionViewCell" customModule="TrueDate" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="match_cell" translatesAutoresizingMaskIntoConstraints="NO" id="ZOO-Rx-Lsw">
+                        <rect key="frame" x="10" y="8" width="80" height="80"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="80" id="eXu-Qa-fzD"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="40"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emily" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4TW-27-naR">
+                        <rect key="frame" x="31" y="96" width="39" height="18"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANi-IS-zos">
+                        <rect key="frame" x="84" y="60" width="8" height="8"/>
+                        <color key="backgroundColor" red="0.94901960784313721" green="0.32549019607843138" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="8" id="Znh-h4-uAx"/>
+                            <constraint firstAttribute="height" constant="8" id="dTg-XO-who"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="ANi-IS-zos" firstAttribute="top" secondItem="vrX-Fs-yfo" secondAttribute="top" constant="60" id="05p-Ft-zaJ"/>
+                <constraint firstAttribute="trailing" secondItem="ZOO-Rx-Lsw" secondAttribute="trailing" constant="10" id="5B0-j7-VQU"/>
+                <constraint firstAttribute="trailing" secondItem="ANi-IS-zos" secondAttribute="trailing" constant="8" id="eJx-gz-E5Q"/>
+                <constraint firstItem="ZOO-Rx-Lsw" firstAttribute="leading" secondItem="vrX-Fs-yfo" secondAttribute="leading" constant="10" id="gdr-jR-5Sr"/>
+                <constraint firstItem="ZOO-Rx-Lsw" firstAttribute="top" secondItem="vrX-Fs-yfo" secondAttribute="top" constant="8" id="kpB-Pe-Jgk"/>
+                <constraint firstItem="4TW-27-naR" firstAttribute="centerX" secondItem="vrX-Fs-yfo" secondAttribute="centerX" id="n2L-mH-wJR"/>
+                <constraint firstItem="ANi-IS-zos" firstAttribute="leading" secondItem="vrX-Fs-yfo" secondAttribute="leading" constant="84" id="rSk-HF-FRC"/>
+                <constraint firstItem="4TW-27-naR" firstAttribute="top" secondItem="ZOO-Rx-Lsw" secondAttribute="bottom" constant="8" id="zYv-3H-JYn"/>
+            </constraints>
+            <connections>
+                <outlet property="name" destination="4TW-27-naR" id="LSy-6o-8xl"/>
+                <outlet property="notifyNewMatch" destination="ANi-IS-zos" id="bqf-Kv-YQY"/>
+                <outlet property="thumbnail" destination="ZOO-Rx-Lsw" id="36K-XD-XgQ"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="match_cell" width="147" height="147"/>
+    </resources>
+</document>
