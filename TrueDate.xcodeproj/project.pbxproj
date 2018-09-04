@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04E7C693213E993A00454908 /* ADRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E7C692213E993A00454908 /* ADRadioButton.swift */; };
 		69274E621F9524CB00223F95 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692E170D1F952338003C3E02 /* ProfileViewController.swift */; };
 		6932478D1FAE13580025ACC1 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695B24D11F916F3900B87BF3 /* Reachability.swift */; };
 		693A21D11F74565C00D62DD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693A21D01F74565C00D62DD8 /* AppDelegate.swift */; };
@@ -98,6 +99,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04E7C692213E993A00454908 /* ADRadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ADRadioButton.swift; path = View/ADRadioButton.swift; sourceTree = "<group>"; };
 		19F94E8438180FEBE7D46612 /* Pods-TrueDate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrueDate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrueDate/Pods-TrueDate.debug.xcconfig"; sourceTree = "<group>"; };
 		692E170D1F952338003C3E02 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = View/Profile/ProfileViewController.swift; sourceTree = "<group>"; };
 		693A21CD1F74565C00D62DD8 /* TrueDate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrueDate.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -355,6 +357,7 @@
 		693A22061F745FAA00D62DD8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04E7C692213E993A00454908 /* ADRadioButton.swift */,
 				69AC7E5220C5A9CA00C743D9 /* AppExtention.swift */,
 				69F387712045C9F6002E4173 /* ProfileDetail */,
 				696B4FF8201E194700E83515 /* ChatView */,
@@ -604,7 +607,6 @@
 				693A21CA1F74565C00D62DD8 /* Frameworks */,
 				693A21CB1F74565C00D62DD8 /* Resources */,
 				0E1A6D85DE13B323AD140D3C /* [CP] Embed Pods Frameworks */,
-				5A3BFE343865E671CDB6C702 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -770,21 +772,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5A3BFE343865E671CDB6C702 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TrueDate/Pods-TrueDate-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -841,6 +828,7 @@
 				693A21FB1F745F0F00D62DD8 /* User.swift in Sources */,
 				693A222C1F74600D00D62DD8 /* MyselfCell.swift in Sources */,
 				695B24E81F91793000B87BF3 /* UIAlertViewControllerExtention.swift in Sources */,
+				04E7C693213E993A00454908 /* ADRadioButton.swift in Sources */,
 				69F949E21F7482E100A40711 /* TutorialPageViewController.swift in Sources */,
 				697E83D4201B4579008E0825 /* OtherUser.swift in Sources */,
 				693A22421F74605500D62DD8 /* SwipeViewController.swift in Sources */,

@@ -14,6 +14,10 @@ import SwiftyJSON
 
 class TutorialViewController: UIViewController {
     
+    @IBOutlet weak var tremsButton: UIButton!
+    @IBOutlet weak var agreeButton: UIButton!
+    @IBOutlet weak var tremButton: ADRadioButton!
+    @IBOutlet weak var bigAlertView: UIView!
     @IBOutlet weak var fbLoginBtn: UIButton!
     @IBOutlet weak var containerView: UIView!
     var dict : [String : AnyObject]!
@@ -62,14 +66,68 @@ class TutorialViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // User's Login
+        if UserRequestsService().currentUser != nil {
+            // User already logged in
+            bigAlertView.isHidden = true
+            
+        }else {
+         bigAlertView.isHidden = false
+          
+        }
+        
+        agreeButton.layer.cornerRadius = 9
+        agreeButton.layer.borderWidth = 2
+        agreeButton.layer.borderColor = UIColor(red:236/255, green:37/255, blue:39/255, alpha:1.00).cgColor
+        agreeButton.titleLabel?.minimumScaleFactor = 0.6
+        agreeButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        
         fbLoginBtn.layer.cornerRadius = 25
-       
         fbLoginBtn.titleLabel?.minimumScaleFactor = 0.6;
         fbLoginBtn.titleLabel?.adjustsFontSizeToFitWidth = true;
         
          NotificationCenter.default.addObserver(self, selector: #selector(statusManager), name: .flagsChanged, object: Network.reachability)
     }
    
+    @IBAction func agreeButtonAction(_ sender: UIButton) {
+        
+        bigAlertView.isHidden = true
+    }
+    
+    
+    
+    @IBAction func termsButtonAction(_ sender: UIButton) {
+        
+        guard let url = URL(string: "https://truedate.newbusys.com/")
+    else {
+            return //be safe
+        }
+        
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        } else {
+            UIApplication.shared.openURL(url)
+        }
+    }
+    
+    @IBAction func acceptTerms(_ sender: UIButton) {
+        
+        if sender.tag == 1 {
+            sender.tag = 2
+            tremButton.outerCircleColor =  UIColor(red:236/255, green:37/255, blue:39/255, alpha:1.00)
+            tremButton.isSelected = true
+            agreeButton.isEnabled = true
+            
+        }
+        else {
+            sender.tag = 1
+            agreeButton.isEnabled = false
+
+            tremButton.outerCircleColor =  UIColor.gray
+            tremButton.isSelected = false
+        }
+    }
+        
    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let tutorialPageViewController = segue.destination as? TutorialPageViewController {

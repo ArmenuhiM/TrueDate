@@ -15,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>0.1</string>
+	<string>0.2</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -54,13 +54,13 @@
 		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>This app requires access to the camera.</string>
+	<string>The camera is required for you to take and share pictures of yourself</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>This application needs access to your location information always and when are in usage</string>
+	<string>Location is required to determine where you are located to find nearby users for you</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>This application needs access to your location information always and when are in usage</string>
+	<string>Location is required to determine where you are located to find nearby users for you</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>This app requires access to the photo library.</string>
+	<string>The camera is required for you to take and share pictures of yourself</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>remote-notification</string>

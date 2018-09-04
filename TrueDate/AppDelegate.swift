@@ -92,6 +92,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
+        
+        if UserRequestsService().currentUser != nil {
+        
         let _ = MainViewController()
         
         let sb = UIStoryboard(name: "Main", bundle: nil)
@@ -99,7 +102,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = mainViewController
         window?.makeKeyAndVisible()
-        // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+        } else {
+            
+        }
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {

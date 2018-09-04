@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mCo-tJ-2Mw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mCo-tJ-2Mw">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -128,7 +128,7 @@
                                 </connections>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b63-lu-esf">
-                                <rect key="frame" x="28" y="579.5" width="319" height="55"/>
+                                <rect key="frame" x="28" y="580.5" width="319" height="53"/>
                                 <color key="backgroundColor" red="0.21176470589999999" green="0.35294117650000001" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="tintColor" red="0.21176470589999999" green="0.35294117650000001" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -139,23 +139,110 @@
                                     <action selector="facebookLogin:" destination="mCo-tJ-2Mw" eventType="touchUpInside" id="fDN-4o-LXR"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TGj-Lp-9Mw" userLabel="BigALertView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YTW-YM-8eV">
+                                        <rect key="frame" x="37.5" y="267" width="300" height="133"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;I have read and agree to the " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="0Su-s7-AHk">
+                                                <rect key="frame" x="30.5" y="23" width="240" height="20"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tha-XM-9MS" customClass="ADRadioButton" customModule="TrueDate" customModuleProvider="target">
+                                                <rect key="frame" x="65.5" y="90.5" width="19.5" height="19"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="outerCircleColor">
+                                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="innerCircleCircleColor">
+                                                        <color key="value" red="0.92549019610000005" green="0.1450980392" blue="0.1529411765" alpha="1" colorSpace="deviceRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="outerCircleLineWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="innerCircleGap">
+                                                        <real key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="acceptTerms:" destination="mCo-tJ-2Mw" eventType="touchUpInside" id="C7F-t0-cVo"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQs-Qt-gfj">
+                                                <rect key="frame" x="161.5" y="88.5" width="90" height="27"/>
+                                                <state key="normal" title="Agree">
+                                                    <color key="titleColor" red="0.92549019610000005" green="0.1450980392" blue="0.1529411765" alpha="1" colorSpace="deviceRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="agreeButtonAction:" destination="mCo-tJ-2Mw" eventType="touchUpInside" id="2UP-oK-26M"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fca-cm-cq8">
+                                                <rect key="frame" x="29" y="46.5" width="240" height="20"/>
+                                                <state key="normal" title="TrueDate EULA and terms.&quot;"/>
+                                                <connections>
+                                                    <action selector="termsButtonAction:" destination="mCo-tJ-2Mw" eventType="touchUpInside" id="9hz-yi-vWI"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstItem="Fca-cm-cq8" firstAttribute="height" secondItem="YTW-YM-8eV" secondAttribute="height" multiplier="0.15" id="14z-Jg-6GB"/>
+                                            <constraint firstItem="0Su-s7-AHk" firstAttribute="width" secondItem="YTW-YM-8eV" secondAttribute="width" multiplier="0.8" id="5uW-TL-1BW"/>
+                                            <constraint firstItem="Fca-cm-cq8" firstAttribute="width" secondItem="YTW-YM-8eV" secondAttribute="width" multiplier="0.8" id="965-Dr-kdy"/>
+                                            <constraint firstItem="eQs-Qt-gfj" firstAttribute="height" secondItem="YTW-YM-8eV" secondAttribute="height" multiplier="0.2" id="9Mi-z3-1JZ"/>
+                                            <constraint firstItem="0Su-s7-AHk" firstAttribute="centerX" secondItem="YTW-YM-8eV" secondAttribute="centerX" id="HtH-FP-HBd"/>
+                                            <constraint firstItem="Fca-cm-cq8" firstAttribute="centerX" secondItem="YTW-YM-8eV" secondAttribute="centerX" constant="-1" id="LzU-M6-bf9"/>
+                                            <constraint firstItem="eQs-Qt-gfj" firstAttribute="centerX" secondItem="YTW-YM-8eV" secondAttribute="centerX" constant="56.5" id="MKN-TK-vSC"/>
+                                            <constraint firstItem="0Su-s7-AHk" firstAttribute="height" secondItem="YTW-YM-8eV" secondAttribute="height" multiplier="0.15" id="WNa-zX-jkN"/>
+                                            <constraint firstItem="Fca-cm-cq8" firstAttribute="centerY" secondItem="YTW-YM-8eV" secondAttribute="centerY" constant="-10" id="YRI-q3-eKH"/>
+                                            <constraint firstItem="eQs-Qt-gfj" firstAttribute="width" secondItem="YTW-YM-8eV" secondAttribute="width" multiplier="0.3" id="ZS8-01-RhO"/>
+                                            <constraint firstItem="Tha-XM-9MS" firstAttribute="height" secondItem="YTW-YM-8eV" secondAttribute="height" multiplier="0.14" id="fnt-wS-BNx"/>
+                                            <constraint firstItem="Tha-XM-9MS" firstAttribute="centerX" secondItem="YTW-YM-8eV" secondAttribute="centerX" multiplier="0.5" id="gpc-dp-P0p"/>
+                                            <constraint firstItem="Tha-XM-9MS" firstAttribute="width" secondItem="YTW-YM-8eV" secondAttribute="width" multiplier="0.065" id="i1X-Tl-GIz"/>
+                                            <constraint firstItem="Tha-XM-9MS" firstAttribute="centerY" secondItem="YTW-YM-8eV" secondAttribute="centerY" multiplier="1.5" id="qq1-G1-iKo"/>
+                                            <constraint firstItem="eQs-Qt-gfj" firstAttribute="centerY" secondItem="YTW-YM-8eV" secondAttribute="centerY" constant="35.5" id="yEc-H2-kw6"/>
+                                            <constraint firstItem="0Su-s7-AHk" firstAttribute="centerY" secondItem="YTW-YM-8eV" secondAttribute="centerY" constant="-33.5" id="z2l-Hb-BRp"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.67000000000000004" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="YTW-YM-8eV" firstAttribute="width" secondItem="TGj-Lp-9Mw" secondAttribute="width" multiplier="0.8" id="ED3-zL-SZj"/>
+                                    <constraint firstItem="YTW-YM-8eV" firstAttribute="height" secondItem="TGj-Lp-9Mw" secondAttribute="height" multiplier="0.2" id="Uhi-nO-NeV"/>
+                                    <constraint firstItem="YTW-YM-8eV" firstAttribute="centerX" secondItem="TGj-Lp-9Mw" secondAttribute="centerX" id="cvW-3F-d3n"/>
+                                    <constraint firstItem="YTW-YM-8eV" firstAttribute="centerY" secondItem="TGj-Lp-9Mw" secondAttribute="centerY" id="yhc-xc-FUc"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="1" green="0.57818080360000002" blue="0.5210100446" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="b63-lu-esf" firstAttribute="centerY" secondItem="dbk-lC-dzf" secondAttribute="centerY" multiplier="1.82" id="1Mz-gq-aLD"/>
-                            <constraint firstItem="b63-lu-esf" firstAttribute="height" secondItem="dbk-lC-dzf" secondAttribute="height" multiplier="0.1" constant="-11.700000000000003" id="B5n-Ye-wQX"/>
+                            <constraint firstItem="TGj-Lp-9Mw" firstAttribute="top" secondItem="w8r-XX-O1J" secondAttribute="top" id="6q4-CB-I51"/>
+                            <constraint firstItem="b63-lu-esf" firstAttribute="height" secondItem="dbk-lC-dzf" secondAttribute="height" multiplier="0.08" id="B5n-Ye-wQX"/>
                             <constraint firstItem="w8r-XX-O1J" firstAttribute="leading" secondItem="dbk-lC-dzf" secondAttribute="leading" id="CzI-Yc-A0z"/>
+                            <constraint firstItem="TGj-Lp-9Mw" firstAttribute="leading" secondItem="w8r-XX-O1J" secondAttribute="leading" id="Nzg-2X-2FZ"/>
+                            <constraint firstItem="TGj-Lp-9Mw" firstAttribute="bottom" secondItem="w8r-XX-O1J" secondAttribute="bottom" id="S3Y-Wy-4aq"/>
                             <constraint firstAttribute="trailing" secondItem="w8r-XX-O1J" secondAttribute="trailing" id="Zrq-fL-Q44"/>
                             <constraint firstItem="w8r-XX-O1J" firstAttribute="top" secondItem="dbk-lC-dzf" secondAttribute="top" id="cPe-zt-qCW"/>
                             <constraint firstItem="b63-lu-esf" firstAttribute="centerX" secondItem="dbk-lC-dzf" secondAttribute="centerX" id="jku-7T-iP4"/>
+                            <constraint firstItem="TGj-Lp-9Mw" firstAttribute="trailing" secondItem="w8r-XX-O1J" secondAttribute="trailing" id="jnj-7C-7vq"/>
                             <constraint firstItem="w8r-XX-O1J" firstAttribute="bottom" secondItem="Jil-bN-yuk" secondAttribute="top" id="nTC-p0-WFJ"/>
                             <constraint firstItem="b63-lu-esf" firstAttribute="width" secondItem="dbk-lC-dzf" secondAttribute="width" multiplier="0.85" id="zud-eR-k0a"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="agreeButton" destination="eQs-Qt-gfj" id="74V-UC-yff"/>
+                        <outlet property="bigAlertView" destination="TGj-Lp-9Mw" id="DRf-qc-EmJ"/>
                         <outlet property="containerView" destination="w8r-XX-O1J" id="yWn-zU-eJA"/>
                         <outlet property="fbLoginBtn" destination="b63-lu-esf" id="xvj-XZ-VT5"/>
+                        <outlet property="tremButton" destination="Tha-XM-9MS" id="xMy-sR-TtD"/>
+                        <outlet property="tremsButton" destination="Fca-cm-cq8" id="Oy9-oN-cv4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NQU-cT-eQT" userLabel="First Responder" sceneMemberID="firstResponder"/>
